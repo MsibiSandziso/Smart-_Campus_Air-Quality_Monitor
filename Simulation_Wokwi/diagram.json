@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "Msibi Sandziso",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -28.8, "left": -62.36, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": 9.9, "left": -178.2, "attrs": {} },
+    {
+      "type": "wokwi-slide-potentiometer",
+      "id": "pot1",
+      "top": 24.2,
+      "left": 75.8,
+      "attrs": { "travelLength": "30" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v19.2", "h-48", "v-153.6" ] ],
+    [ "dht1:GND", "esp:GND.1", "black", [ "v19.2", "h57.6", "v-19.2" ] ],
+    [ "pot1:VCC", "esp:3V3", "red", [ "h0", "v-134.4", "h-144" ] ],
+    [ "pot1:GND", "esp:GND.2", "black", [ "v0" ] ],
+    [ "dht1:SDA", "esp:15", "green", [ "v105.6", "h211.3", "v-86.4" ] ],
+    [ "pot1:SIG", "esp:34", "green", [ "h9.6", "v124", "h-182.4", "v-172.8" ] ]
+  ],
+  "dependencies": {}
+}
