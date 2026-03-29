@@ -16,3 +16,6 @@ An AIoT project developed using Scrum methodology. This system monitors air qual
 - ESP32 Development Board
 - DHT22 (Temperature & Humidity)
 - MQ135 (Air Quality/CO)
+
+### Wokwi Simulation link
+https://wokwi.com/projects/459813373716129793
